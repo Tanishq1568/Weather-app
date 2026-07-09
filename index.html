@@ -1,54 +1,154 @@
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weather app</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Pro</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link rel="stylesheet" href="style.css">
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-  </head>
+</head>
 
-  <body>
+<body>
+
+    <!-- Navbar -->
     <div class="nav-bar">
-        <img src="icon.jpg" width="60px" alt="">
-        <h1 style="text-align:rightS;">Weather.com</h1>
-        <h1><b></b></h1>
-        </div>
+        <img src="icon.jpg" width="60" alt="Logo">
+        <h1 class="title">Weather.com</h1>
+    </div>
 
+    <!-- App -->
     <div class="app">
-      <header>
-        <input
-          type="text"
-          autocomplete="off"
-          class="search-box"
-          placeholder="Search for your city..."
-        />
-        <button class="button">
-          <i class="fa fa-search"></i>
-        </button>
-      </header>
 
-      <main>
-        <section class="location">
-          <div class="city"></div>
-          <div class="date"></div>
-        </section>
+        <!-- Search -->
+        <header>
 
-        <div class="current">
-          <div class="temp"><span></span></div>
-          <div class="weather"></div>
-        </div>
-      </main>
+            <input
+                type="text"
+                autocomplete="off"
+                class="search-box"
+                placeholder="Search for your city..."
+            />
+
+            <button class="button">
+                <i class="fa fa-search"></i>
+            </button>
+
+            <button id="location-btn">
+                📍 My Location
+            </button>
+
+        </header>
+
+        <!-- Main Weather Card -->
+        <main>
+
+            <section class="location">
+                <div class="city">Search a city</div>
+                <div class="date"></div>
+            </section>
+
+            <!-- Weather Icon -->
+            <div class="weather-icon-container">
+                <img
+                    class="weather-icon"
+                    src=""
+                    alt="Weather Icon"
+                />
+            </div>
+
+            <!-- Current Weather -->
+            <div class="current">
+                <div class="temp">--°C</div>
+                <div class="weather">---</div>
+            </div>
+
+            <!-- Weather Details -->
+            <section class="weather-details">
+
+                <div class="detail-card">
+                    <h4>🌡 Feels Like</h4>
+                    <p id="feels-like">--</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>💧 Humidity</h4>
+                    <p id="humidity">--</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>🌬 Wind</h4>
+                    <p id="wind">--</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>📊 Pressure</h4>
+                    <p id="pressure">--</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>👁 Visibility</h4>
+                    <p id="visibility">--</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>🌡 Min / Max</h4>
+                    <p id="min-max">--</p>
+                </div>
+
+            </section>
+
+            <!-- Sunrise Sunset -->
+            <section class="sun-times">
+
+                <div class="sun-card">
+                    <h4>🌅 Sunrise</h4>
+                    <p id="sunrise">--</p>
+                </div>
+
+                <div class="sun-card">
+                    <h4>🌇 Sunset</h4>
+                    <p id="sunset">--</p>
+                </div>
+
+            </section>
+
+            <!-- Recent Searches -->
+            <section class="recent-searches-section">
+
+                <h2>Recent Searches</h2>
+
+                <div class="recent-searches">
+
+                </div>
+
+            </section>
+
+            <!-- Forecast -->
+            <section class="forecast-section">
+
+                <h2>10-Day Forecast</h2>
+
+                <div class="forecast-container">
+
+                </div>
+
+            </section>
+
+        </main>
+
     </div>
 
     <script src="./script.js"></script>
-  </body>
+
+</body>
 </html>
